@@ -1,0 +1,28 @@
+
+.top-bar{
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row ;
+  justify-content: space-between;
+  background-color: #2d4c82;
+  height: 30px;
+}
+
+.top-bar a{
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.left-side{
+  margin-left: 10px; 
+}
+
+.right-side{
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  margin-right: 20px;
+}

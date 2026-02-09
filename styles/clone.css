@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #1e6bf1;
+  color: white;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.top-bar a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e6bf1;
+}
+
+.search-box {
+  display: flex;
+  width: 40%;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-box button {
+  background: #1e6bf1;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.icons {
+  font-size: 20px;
+}
+
+/* HERO */
+.hero {
+  background: #2f7df6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+}
+
+.hero-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.buy {
+  background: white;
+  color: #2f7df6;
+}
+
+.learn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+  max-width: 300px;
+}
+
+/* INTRO */
+.intro {
+  background: linear-gradient(to right, #6aa3ff, #c7d9ff);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.intro h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.intro span {
+  color: #1e6bf1;
+}
+
+.intro button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #1e6bf1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    margin-top: 30px;
+  }
+}
