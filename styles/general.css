@@ -201,10 +201,11 @@ body {
   transform: translateY(-2px);
 }
 
-.container{
+/* LOGIN MODAL */
+.container {
   width: 400px;
   height: 400px;
-  display: flex ;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -215,32 +216,30 @@ body {
   border-color: blue;
 }
 
-
-.login-logo{
+.login-logo {
   width: 120px;
   height: auto;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .username-input,
-.password-input{
-  padding-top: 10px;
-  padding-bottom: 10px;
+.password-input {
+  padding: 10px 0;
   border-radius: 8px;
   border: none;
   margin-bottom: 7px;
   width: 100%;
 }
-.login-button{
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+.login-button {
+  padding: 10px 0;
   border-radius: 7px;
   border: none;
   width: 100%;
   font-weight: bold;
 }
 
-.login-modal{
+.login-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -256,8 +255,9 @@ body {
   display: flex;
 }
 
+/* RESPONSIVE STYLES */
 
-/* RESPONSIVE */
+/* 1024px */
 @media (max-width: 1024px) {
   .main {
     flex-direction: column-reverse;
@@ -270,6 +270,7 @@ body {
   }
 }
 
+/* 600px */
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
@@ -294,3 +295,48 @@ body {
     font-size: 28px;
   }
 }
+
+/* 480px - MOBILE */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .left-header {
+    flex: 0;
+  }
+
+  .left-header .jmc {
+    height: 45px;
+  }
+
+  .mid-header {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .search {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .search-button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .right-header {
+    flex: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .right-header img {
+    height: 22px;
+  }
+}
+
