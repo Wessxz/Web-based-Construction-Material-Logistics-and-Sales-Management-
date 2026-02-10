@@ -14,3 +14,11 @@ loginModal.addEventListener('click', function(e) {
     loginModal.classList.remove('active');
   }
 });
+
+const hamburger = document.getElementById('hamburgerMenu');
+const categoryMenu = document.querySelector('.category-menu');
+
+hamburger.addEventListener('click', () => {
+  categoryMenu.classList.toggle('active');
+});
+

@@ -104,6 +104,38 @@ body {
   transform: scale(1.2);
 }
 
+/* HAMBURGER MENU */
+.hamburger-menu {
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
+  padding-bottom: 2px;
+  color: #fff;
+}
+
+/* CATEGORY MENU */
+.category-menu {
+  background-color: #2563eb;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px 0;
+}
+
+.category-item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.category-item a:hover {
+  background-color: #1e40af;
+}
+
 /* MAIN SECTION */
 .main {
   display: flex;
@@ -255,6 +287,96 @@ body {
   display: flex;
 }
 
+
+
+
+.products-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1f2937;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-card {
+  display: grid;
+  column-gap: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  position: relative;
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 15px;
+}
+
+.product-card .add-to-cart {
+  padding: 10px 20px;
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card .add-to-cart:hover {
+  background-color: #f97316;
+  color: #fff;
+}
+@media (min-width: 1000px){
+  .products-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .products-section {
+    padding: 30px 10px;
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+}
+
+
+
+
 /* RESPONSIVE STYLES */
 
 /* 1024px */
@@ -296,17 +418,21 @@ body {
   }
 }
 
-/* 480px - MOBILE */
+/* 480px */
 @media (max-width: 480px) {
+
+  /* HEADER */
   .header {
     flex-direction: row;
     align-items: center;
     padding: 10px 15px;
-    gap: 10px;
+    height: auto;
   }
 
   .left-header {
-    flex: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
   .left-header .jmc {
@@ -314,29 +440,135 @@ body {
   }
 
   .mid-header {
-    flex: 1;
-    margin: 0 10px;
+    display: flex;
+    width: 100%;
+    margin: 0 0 10px 0;
   }
 
   .search {
-    width: 100%;
+    flex: 1;
     font-size: 13px;
     padding: 8px 10px;
+    border-radius: 8px 0 0 8px;
   }
 
   .search-button {
     padding: 8px 12px;
     font-size: 13px;
+    border-radius: 0 8px 8px 0;
   }
 
   .right-header {
-    flex: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
   }
 
   .right-header img {
     height: 22px;
   }
-}
 
+  /* HAMBURGER MENU */
+  .hamburger-menu {
+    display: block;
+    color: #1e3a8a;
+  }
+
+  .category-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #2563eb;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .category-menu.active {
+    display: flex;
+  }
+
+  .category-item {
+    padding: 8px 20px;
+    width: 100%;
+  }
+
+  /* MAIN SECTION */
+  .main {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .main-text h1 {
+    font-size: 28px;
+  }
+
+  .main-text p {
+    font-size: 14px;
+  }
+
+  .main-button {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-button button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .hammer-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* INTRO SECTION */
+  .intro {
+    padding: 50px 15px;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .intro button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  /* LOGIN MODAL */
+  .login-modal {
+    margin-top: 0;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    width: 90%;
+    height: auto;
+    padding: 25px 20px;
+  }
+
+  .login-logo {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+
+  .username-input,
+  .password-input,
+  .login-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
