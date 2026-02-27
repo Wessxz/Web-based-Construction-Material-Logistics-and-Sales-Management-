@@ -15,10 +15,9 @@ loginModal.addEventListener('click', function(e) {
   }
 });
 
-const hamburger = document.getElementById('hamburgerMenu');
-const categoryMenu = document.querySelector('.category-menu');
+  const hamburger = document.getElementById("hamburger");
+  const categoryMenu = document.getElementById("categoryMenu");
 
-hamburger.addEventListener('click', () => {
-  categoryMenu.classList.toggle('active');
-});
-
+  hamburger.addEventListener("click", () => {
+    categoryMenu.classList.toggle("active");
+  });
