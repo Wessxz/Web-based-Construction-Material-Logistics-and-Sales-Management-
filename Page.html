@@ -3,153 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page</title>
-
-        <link
+    <title>JMC Materials</title>
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="styles/general.css" />
   </head>
   <body>
-    <div></div>
+    <!-- TOP BAR -->
     <div class="top-bar">
       <div class="left-side">+381 611 23 321 | ✉ test@email.com</div>
       <div class="right-side">
-        <a href="">Register</a> <a href="Js/login.js" id="login-link">Login</a>
+        <a href="">Register</a> <a href="#" id="login-link">Login</a>
       </div>
     </div>
-
-
     <header class="header">
       <div class="left-header">
         <div class="hamburger-menu" id="hamburgerMenu">&#9776;</div>
-        <div class="logo"><img class="jmc" src="img/download.png " /></div>
+        <div class="logo"><img class="jmc" src="img/download.png" /></div>
       </div>
-
       <div class="mid-header">
         <div class="search-container">
-         <input class="search" type="text" placeholder="Search" />
-        <button class="search-button">Search</button>
+          <input class="search" type="text" placeholder="Search" />
+          <button class="search-button">Search</button>
         </div>
-    
-        <div class="cart">
-          <img src="Icons/download (1).png" />
-        </div>
+        <div class="cart"><img src="Icons/download (1).png" /></div>
       </div>
     </header>
-
-
     <div class="category-menu">
-      <a href="#">Electrical</a>
-      <a href="#">Pipes</a>
-      <a href="#">Cement</a>
-      <a href="#">Steel</a>
-      <a href="#">Tools</a>
-      <a href="#">Hardware</a>
+      <a href="#">Electrical</a> <a href="#">Pipes</a> <a href="#">Cement</a>
+      <a href="#">Steel</a> <a href="#">Tools</a> <a href="#">Hardware</a>
     </div>
-    <div class="main">
-      <div class="main-text">
-        <h1>JMC Constraction Materials</h1>
-        <p>
-          JMC Materials serves you the best by providing high-quality
-          construction materials you can trust for every project.
-        </p>
-        <div class="main-button">
-          <button class="buynow-button">BUY NOW</button>
-          <button class="learnmore-button">LEARN MORE</button>
+    <div class="hero-slider">
+      <img src="img/slide1.png" class="hero-slide active" />
+      <img src="img/slide2.png" class="hero-slide" />
+      <img src="img/slide3.png" class="hero-slide" />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>JMC Construction Materials</h1>
+          <p>
+            JMC Materials serves you the best by providing high-quality
+            construction materials you can trust for every project.
+          </p>
+          <div class="main-button">
+            <button class="buynow-button">BUY NOW</button>
+            <button class="learnmore-button">LEARN MORE</button>
+          </div>
         </div>
       </div>
-      <div class="main-img"><img class="hammer-img" src="img/A1.png" /></div>
+      <button class="slider-btn prev-slide">&#10094;</button>
+      <button class="slider-btn next-slide">&#10095;</button>
     </div>
+    <!-- PRODUCTS -->
     <section class="products-section">
-      <h2>What We Offer</h2>
-      <div class="products-grid">
-        <div class="product-card">
-          <img src="img/republic-cement.jpg" alt="Cement" />
-          <h3>Cement</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/angle-bar-600x600.jpg" alt="Cement" />
-          <h3>Angel Bar</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/KD-WOOD.jpg" alt="Cement" />
-          <h3>Good Lumber</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/plain-round-bar.jpg" alt="Cement" />
-          <h3>Plain Round Bar</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/coco-lumber.jpg" alt="Cement" />
-          <h3>Coco Lumber</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/coronet-marine-plywood.jpg" alt="Cement" />
-          <h3>Marine Plywood</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/gi-wire.jpg" alt="Cement" />
-          <h3>GI Wire</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/concrete-hollow-block-300x300.jpg" alt="Cement" />
-          <h3>Concrete Hollow Block</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="img/cement.png" alt="Cement" />
-          <h3>Cement</h3>
-          <p class="price">₱150</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        </div>
-      </div>
+      <h2>Featured Products</h2>
+      <div class="products-grid js-product-grid"></div>
     </section>
-
-    <div class="flash-sale">
-      <img src="img/flashsale.png">
-    </div>
-
+    <!-- FOOTER -->
     <footer class="footer">
-      <h1>JMC <span>MATERIALS</span></h1>
-      <p>
-        Serves you the best with durable, affordable, and reliable<br />construction
-        supplies for residential and commercial projects.
-      </p>
-      <button>SHOP NOW</button>
-    </footer>
+      <!-- Top: Logo + Features -->
+      <div class="footer-top">
+        <div class="footer-features">
+          <div class="feature">
+            <img src="img/diamond.png" alt="Quality Products" />
+            <p>Quality Products</p>
+          </div>
 
-    <div class="login-modal" id="loginModal">
+          <div class="feature">
+            <img src="img/truck.png" alt="Fast Delivery" />
+            <p>Fast Delivery</p>
+          </div>
 
-      <div class="container">
-        <img class="login-logo" src="img/JMC.png" alt="Logo" />
-        <input class="username-input" type="text" placeholder="👤Username" />
-        <input
-          class="password-input"
-          type="password"
-          placeholder="🔒Password"
-        />
-        <button class="login-button">Login</button>
+          <div class="feature">
+            <img src="img/cod.png" alt="Cash on Delivery" />
+            <p>Cash-on Delivery</p>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <!-- Bottom: Contact & Links -->
+      <div class="footer-bottom">
+        <div class="jmc-logo"><img src="img/jmc.jpg " /></div>
+        <div class="footer-column contact-us">
+          <h3>Contact Us</h3>
+          <div class="branch">
+            <strong>SUCAT BRANCH</strong>
+            <p>421 Purok 2, Muntinlupa, 1770 Metro Manila</p>
+            <p>📞 +63 9683743025</p>
+            <p>✉ jmcmerchandise@gmail.com</p>
+            <div class="fb">
+              <span class="fb-letter">f:</span> JMC MERCHANDISE
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Terms and Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Return and Refund Policy</li>
+            <li>Blogs</li>
+            <li>We deliver in your area!</li>
+          </ul>
+        </div>
+
+        <!-- Business Info -->
+        <div class="footer-column business">
+          <h3>Business</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Invest with Us</li>
+            <li>Bulk Order</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="data/products.js"></script>
+    <script src="Js/product.js"></script>
     <script src="Js/login.js"></script>
   </body>
 </html>
